@@ -46,6 +46,7 @@
 
             var author = $('input[name=username]').val();
             var message = $('input[name=message]').val();
+            $('input[name=message]').val('');
 
             if(author.length && message.length) {
                 var messageObject = {
