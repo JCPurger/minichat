@@ -41,6 +41,10 @@
             renderMessage(message);
         });
 
+        socket.on('clearAll', function() {
+            $('.messages .message').remove();
+        });
+
         $('#chat').submit(function (e) {
             e.preventDefault();
 

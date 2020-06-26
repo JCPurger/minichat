@@ -21,7 +21,12 @@ io.on('connection', socket => {
     socket.emit('previousMessages', messages)
 
     socket.on('sendMessage', data => {
-        messages.push(data)
-        socket.broadcast.emit('receivedMessage', data)
+        if(data.message === "/clear") {
+            messages = [];
+            socket.broadcast.emit('clearAll');
+        } else {
+            messages.push(data)
+            socket.broadcast.emit('receivedMessage', data)
+        }
     })
 })
