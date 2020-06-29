@@ -1,10 +1,12 @@
 version: '2.0'
 services:
-  express-api:
+  node:
     build: 
       context: ../
-      dockerfile: ./docker/express/Dockerfile
+      dockerfile: ./docker/nodejs/Dockerfile
     ports:
       - "80:80"
+    volumes:
+      - ../:/var/www
     environment:
       PORT: 80

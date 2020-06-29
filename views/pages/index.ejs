@@ -14,9 +14,9 @@
 <body>
     <div class="container">
         <form id="chat">
-            <input type="text" name="username" placeholder="Digite seu usuário">
+            <input type="text" name="username" placeholder="Digite seu usuário" required>
             <div class="messages"></div>
-            <input type="text" name="message" placeholder="Digite sua mensagem" autocomplete="off">
+            <input type="text" name="message" placeholder="Digite sua mensagem" autocomplete="off" required>
             <button type="submit"> Enviar </button>
         </form>
     </div>
@@ -50,9 +50,9 @@
 
             var author = $('input[name=username]').val();
             var message = $('input[name=message]').val();
-            $('input[name=message]').val('');
 
             if(author.length && message.length) {
+                $('input[name=message]').val('');
                 var messageObject = {
                     author: author,
                     message: message
