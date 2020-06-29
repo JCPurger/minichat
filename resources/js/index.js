@@ -1,3 +1,5 @@
+import '../css/style.scss';
+
 var socket = io(window.location.href);
 
 function renderMessage(message) {

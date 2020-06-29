@@ -1,4 +1,6 @@
-html, body, div, span, applet, object, iframe,
+@import 'vars';
+
+.teste,html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -60,7 +62,7 @@ form {
 
 input {
     box-sizing: border-box;
-    border: 1px solid gray;
+    border: 1px solid $gray-1;
     width: 100%;
     font-size: 20px;
     padding: 0.5rem 1rem;
@@ -71,7 +73,7 @@ input {
 button {
     width: 100%;
     font-size: 20px;
-    background-color: #4a74fb;
+    background-color: $primary;
     padding: 16px;
     color: #fff;
     border-radius: 11px;
@@ -81,7 +83,7 @@ button {
 div.messages {
     overflow: auto;
     height: 250px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid $gray-0;
     border-radius: 10px;
     margin: 0 auto;
     margin-bottom: 1rem;
